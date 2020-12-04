@@ -1,6 +1,6 @@
 using System;
 
-namespace shoppingCart
+namespace ShoppingCart.Models
 {
     public class WeatherForecast
     {
