@@ -12,6 +12,11 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="5.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.0" />
+    <PackageReference Include="Microsoft.TypeScript.MSBuild" Version="4.1.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="5.0.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -19,6 +24,25 @@
     <Content Remove="$(SpaRoot)**" />
     <None Remove="$(SpaRoot)**" />
     <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="ClientApp\src\Actions\counter-action.ts" />
+    <None Remove="ClientApp\src\Actions\sandwich-menu-action.ts" />
+    <None Remove="ClientApp\src\Actions\shopping-cart-action.ts" />
+    <None Remove="ClientApp\src\components\SandwichMenu.tsx" />
+    <None Remove="ClientApp\src\components\shopping-cart-review.ts" />
+    <None Remove="ClientApp\src\components\shopping-cart-review.tsx" />
+    <None Remove="ClientApp\src\Interfaces\shopping-cart.ts" />
+    <None Remove="ClientApp\src\Reducers\counter-reducer.ts" />
+    <None Remove="ClientApp\src\Reducers\sandwich-menu-reducer.ts" />
+    <None Remove="ClientApp\src\Reducers\shopping-cart-reducer.ts" />
+    <None Remove="ClientApp\src\Sagas\root-saga.ts" />
+    <None Remove="ClientApp\src\store\Sanwiches.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\src\components\SandwichMenu.tsx" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">

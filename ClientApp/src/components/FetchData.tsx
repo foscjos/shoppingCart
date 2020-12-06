@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { RouteComponentProps } from 'react-router';
 import { Link } from 'react-router-dom';
 import { ApplicationState } from '../store';
-import * as WeatherForecastsStore from '../store/WeatherForecasts';
+import * as WeatherForecastsStore from '../Interfaces/WeatherForecasts';
 
 // At runtime, Redux will merge together...
 type WeatherForecastProps =
@@ -14,12 +14,12 @@ type WeatherForecastProps =
 
 class FetchData extends React.PureComponent<WeatherForecastProps> {
   // This method is called when the component is first added to the document
-  public componentDidMount() {
+    public componentDidMount() {
     this.ensureDataFetched();
   }
 
   // This method is called when the route parameters change
-  public componentDidUpdate() {
+    public componentDidUpdate() {
     this.ensureDataFetched();
   }
 
