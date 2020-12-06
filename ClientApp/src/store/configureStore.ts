@@ -2,12 +2,16 @@ import { applyMiddleware, combineReducers, compose, createStore } from 'redux';
 import thunk from 'redux-thunk';
 import { connectRouter, routerMiddleware } from 'connected-react-router';
 import { History } from 'history';
+import createSagaMiddleware from 'redux-saga';
 import { ApplicationState, reducers } from './';
+import { rootSaga } from '../Sagas/root-saga';
 
 export default function configureStore(history: History, initialState?: ApplicationState) {
+    const sagaMiddleware = createSagaMiddleware();
     const middleware = [
         thunk,
-        routerMiddleware(history)
+        routerMiddleware(history),
+        sagaMiddleware
     ];
 
     const rootReducer = combineReducers({
@@ -21,9 +25,13 @@ export default function configureStore(history: History, initialState?: Applicat
         enhancers.push(windowIfDefined.__REDUX_DEVTOOLS_EXTENSION__());
     }
 
-    return createStore(
+    const store = createStore(
         rootReducer,
         initialState,
         compose(applyMiddleware(...middleware), ...enhancers)
     );
+
+    sagaMiddleware.run(rootSaga);
+
+    return store; 
 }
