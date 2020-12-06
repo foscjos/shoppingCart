@@ -1,4 +1,4 @@
-﻿import { Sandwich } from "../Interfaces/Sandwiches";
+﻿import { Sandwich } from "../Interfaces/sandwiches";
 import { ShoppingCartState } from "../Interfaces/shopping-cart";
 
 export const shoppingCartReducer = (state = {} as ShoppingCartState, action) => {

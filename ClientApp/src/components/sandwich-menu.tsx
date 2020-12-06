@@ -2,7 +2,7 @@
 import { connect } from 'react-redux';
 import { RouteComponentProps } from "react-router";
 import { ApplicationState } from "../store";
-import * as SandwichMenuStore from '../Interfaces/Sandwiches';
+import * as SandwichMenuStore from '../Interfaces/sandwiches';
 import { addItemToCart } from '../Actions/shopping-cart-action';
 import { requestSandwichMenu } from '../Actions/sandwich-menu-action';
 

@@ -1,4 +1,4 @@
-﻿import { Sandwich } from "../store/Sandwiches"
+﻿import { Sandwich } from "../Interfaces/Sandwiches"
 
 export const requestSandwichMenu = () => ({
     type: 'REQUEST_SANDWICH_MENU',

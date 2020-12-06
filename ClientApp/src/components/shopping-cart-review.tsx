@@ -4,7 +4,7 @@ import { RouteComponentProps } from "react-router";
 import { ShoppingCartItem, ShoppingCartState } from "../Interfaces/shopping-cart";
 import { ApplicationState } from "../store";
 import { addItemToCart, removeItemFromCart, removeEntireItem } from '../Actions/shopping-cart-action';
-import * as SandwichMenuStore from '../Interfaces/Sandwiches';
+import * as SandwichMenuStore from '../Interfaces/sandwiches';
 
 export interface ShoppinngCartReviewDispatchProps {
     addItemToCart: (item: SandwichMenuStore.Sandwich) => void;

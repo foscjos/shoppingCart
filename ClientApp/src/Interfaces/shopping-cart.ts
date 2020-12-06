@@ -1,4 +1,4 @@
-﻿import { Sandwich } from "./Sandwiches";
+﻿import { Sandwich } from "./sandwiches";
 
 export interface ShoppingCartState {
     items: ShoppingCartItem[];
