@@ -1,6 +1,6 @@
 ﻿import { put, takeLatest } from "redux-saga/effects";
 import { getSandwichMenuSuccess } from "../Actions/sandwich-menu-action";
-import { Sandwich } from "../Interfaces/Sandwiches";
+import { Sandwich } from "../Interfaces/sandwiches";
 
 export function* watchRequestMenu() {
     yield takeLatest('REQUEST_SANDWICH_MENU', callGetMenu);

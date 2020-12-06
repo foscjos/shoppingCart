@@ -1,4 +1,4 @@
-﻿import { SandwichMenuState } from "../Interfaces/Sandwiches";
+﻿import { SandwichMenuState } from "../Interfaces/sandwiches";
 
 export const sandwichMenuReducer = (state = {} as SandwichMenuState, action) => {
     if (state === undefined || state.sandwiches === undefined) {

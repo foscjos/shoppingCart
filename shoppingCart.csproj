@@ -34,7 +34,6 @@
     <None Remove="ClientApp\src\components\shopping-cart-review.ts" />
     <None Remove="ClientApp\src\components\shopping-cart-review.tsx" />
     <None Remove="ClientApp\src\Interfaces\shopping-cart.ts" />
-    <None Remove="ClientApp\src\Reducers\counter-reducer.ts" />
     <None Remove="ClientApp\src\Reducers\sandwich-menu-reducer.ts" />
     <None Remove="ClientApp\src\Reducers\shopping-cart-reducer.ts" />
     <None Remove="ClientApp\src\Sagas\root-saga.ts" />
