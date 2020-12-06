@@ -30,7 +30,9 @@
     <None Remove="ClientApp\src\Actions\counter-action.ts" />
     <None Remove="ClientApp\src\Actions\sandwich-menu-action.ts" />
     <None Remove="ClientApp\src\Actions\shopping-cart-action.ts" />
-    <None Remove="ClientApp\src\components\SandwichMenu.tsx" />
+    <None Remove="ClientApp\src\components\home.tsx" />
+    <None Remove="ClientApp\src\components\layout.tsx" />
+    <None Remove="ClientApp\src\components\sandwich-menu.tsx" />
     <None Remove="ClientApp\src\components\shopping-cart-review.ts" />
     <None Remove="ClientApp\src\components\shopping-cart-review.tsx" />
     <None Remove="ClientApp\src\Interfaces\shopping-cart.ts" />
@@ -38,10 +40,6 @@
     <None Remove="ClientApp\src\Reducers\shopping-cart-reducer.ts" />
     <None Remove="ClientApp\src\Sagas\root-saga.ts" />
     <None Remove="ClientApp\src\store\Sanwiches.ts" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <TypeScriptCompile Include="ClientApp\src\components\SandwichMenu.tsx" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
