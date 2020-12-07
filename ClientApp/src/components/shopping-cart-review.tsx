@@ -1,6 +1,8 @@
 ﻿import * as React from "react";
 import { connect } from "react-redux";
 import { RouteComponentProps } from "react-router";
+import { NavLink } from 'reactstrap';
+import { Link } from 'react-router-dom';
 import { ShoppingCartItem, ShoppingCartState } from "../Interfaces/shopping-cart";
 import { ApplicationState } from "../store";
 import { addItemToCart, removeItemFromCart, removeEntireItem } from '../Actions/shopping-cart-action';
@@ -58,6 +60,8 @@ class ShoppinngCartReview extends React.PureComponent<ShoppingCartReviewProps> {
                         <th>Price per unit</th>
                         <th>Quantity</th>
                         <th />
+                        <th />
+                        <th />
                     </tr>
                 </thead>
                 <tbody>
@@ -81,8 +85,13 @@ class ShoppinngCartReview extends React.PureComponent<ShoppingCartReviewProps> {
             <React.Fragment>
                 <h1 id="tabelLabel">Shopping Cart</h1>
                 {this.renderCart()}
-                <div>
-                    Total Price: ${this.props.totalPrice}
+                <div className="row">
+                    <div className="col-md-10 col-xs-8">
+                        Total Price: ${this.props.totalPrice}
+                    </div>
+                    <div className="col-md-2 col-xs-4">
+                        <NavLink tag={Link} className="text-dark" to="/check-out"><button className="btn btn-primary btn-lg" type="button">Check out</button></NavLink>
+                    </div>
                 </div>
             </React.Fragment>
         );

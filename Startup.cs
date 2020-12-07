@@ -51,6 +51,8 @@ namespace ShoppingCart
             app.UseStaticFiles();
             app.UseSpaStaticFiles();
 
+            app.UseDefaultFiles();
+
             app.UseRouting();
 
             app.UseEndpoints(endpoints =>

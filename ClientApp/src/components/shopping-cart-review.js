@@ -16,6 +16,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.mapDispatchToProps = void 0;
 var React = require("react");
 var react_redux_1 = require("react-redux");
+var reactstrap_1 = require("reactstrap");
+var react_router_dom_1 = require("react-router-dom");
 var shopping_cart_action_1 = require("../Actions/shopping-cart-action");
 var ShoppinngCartReview = /** @class */ (function (_super) {
     __extends(ShoppinngCartReview, _super);
@@ -42,6 +44,8 @@ var ShoppinngCartReview = /** @class */ (function (_super) {
                     React.createElement("th", null, "Item"),
                     React.createElement("th", null, "Price per unit"),
                     React.createElement("th", null, "Quantity"),
+                    React.createElement("th", null),
+                    React.createElement("th", null),
                     React.createElement("th", null))),
             React.createElement("tbody", null, this.props.items.map(function (cartItem) {
                 return React.createElement("tr", { key: cartItem.item.sku },
@@ -59,9 +63,13 @@ var ShoppinngCartReview = /** @class */ (function (_super) {
         return (React.createElement(React.Fragment, null,
             React.createElement("h1", { id: "tabelLabel" }, "Shopping Cart"),
             this.renderCart(),
-            React.createElement("div", null,
-                "Total Price: $",
-                this.props.totalPrice)));
+            React.createElement("div", { className: "row" },
+                React.createElement("div", { className: "col-md-10 col-xs-8" },
+                    "Total Price: $",
+                    this.props.totalPrice),
+                React.createElement("div", { className: "col-md-2 col-xs-4" },
+                    React.createElement(reactstrap_1.NavLink, { tag: react_router_dom_1.Link, className: "text-dark", to: "/check-out" },
+                        React.createElement("button", { className: "btn btn-primary btn-lg", type: "button" }, "Check out"))))));
     };
     return ShoppinngCartReview;
 }(React.PureComponent));
