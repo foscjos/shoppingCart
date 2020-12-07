@@ -28,16 +28,20 @@
 
   <ItemGroup>
     <None Remove="ClientApp\src\Actions\counter-action.ts" />
+    <None Remove="ClientApp\src\Actions\order-action.ts" />
     <None Remove="ClientApp\src\Actions\sandwich-menu-action.ts" />
     <None Remove="ClientApp\src\Actions\shopping-cart-action.ts" />
-    <None Remove="ClientApp\src\components\home.tsx" />
-    <None Remove="ClientApp\src\components\layout.tsx" />
-    <None Remove="ClientApp\src\components\sandwich-menu.tsx" />
+    <None Remove="ClientApp\src\components\checkout-form.tsx" />
+    <None Remove="ClientApp\src\components\order-checkout.tsx" />
+    <None Remove="ClientApp\src\components\SandwichMenu.tsx" />
     <None Remove="ClientApp\src\components\shopping-cart-review.ts" />
     <None Remove="ClientApp\src\components\shopping-cart-review.tsx" />
+    <None Remove="ClientApp\src\Interfaces\order-details-form.tsx" />
     <None Remove="ClientApp\src\Interfaces\shopping-cart.ts" />
+    <None Remove="ClientApp\src\Reducers\order-reducer.ts" />
     <None Remove="ClientApp\src\Reducers\sandwich-menu-reducer.ts" />
     <None Remove="ClientApp\src\Reducers\shopping-cart-reducer.ts" />
+    <None Remove="ClientApp\src\Sagas\order-saga.ts" />
     <None Remove="ClientApp\src\Sagas\root-saga.ts" />
     <None Remove="ClientApp\src\store\Sanwiches.ts" />
   </ItemGroup>

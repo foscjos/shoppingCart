@@ -1,5 +1,4 @@
-﻿// Interfaces
-export interface SandwichMenuState {
+﻿export interface SandwichMenuState {
     isLoading: boolean;
     sandwiches: Sandwich[];
 }

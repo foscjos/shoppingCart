@@ -39,7 +39,7 @@ namespace ShoppingCart.Controllers
                         var sandwich = new Sandwich
                         {
                             SKU = (int)reader.GetValue(reader.GetOrdinal("SKU")),
-                            Name = (string)reader.GetValue(reader.GetOrdinal("ItemName")),
+                            Name = (string)reader.GetValue(reader.GetOrdinal("Name")),
                             Description = (string)reader.GetValue(reader.GetOrdinal("Description")),
                             Price = (decimal)reader.GetValue(reader.GetOrdinal("Price")),
                         };
